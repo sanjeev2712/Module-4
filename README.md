@@ -11,13 +11,22 @@ To write a Python program that calculates the **area of a circle** based on the 
 4. **Execute the program**: Create an object of the class and call the method with the radius value.
 
 ## 🧾 Program
+```
+import math
 
-Add code here
+class cse:
+    def mech(self, r):
+        area = math.pi * r * r
+        print("Area of the circle:", area)
 
+radius = float(input("Enter the radius of the circle: "))
+obj = cse()
+obj.mech(radius)
+```
 ## Output
-
+![alt text](<Screenshot 2026-01-01 103333.png>)
 ## Result
-
+This program was executed successfully.
 ## Dictionary Operations in Python: Merging Two Dictionaries
 
 ## 🎯 Aim
@@ -30,12 +39,21 @@ To write a Python program that merges **two dictionaries** and combines their ke
 3. Call the `merge()` function and print the merged dictionary.
 
 ## 🧾 Program
+```
+def merge(dict1, dict2):
+    merged = {**dict1, **dict2}
+    return merged
 
-Add code here
+dict1 = {'a': 1, 'b': 2, 'c': 3}
+dict2 = {'d': 4, 'e': 5, 'a': 6}
 
+result = merge(dict1, dict2)
+print("Merged dictionary:", result)
+```
 ## Output
-
+![alt text](<Screenshot 2026-01-01 103523.png>)
 ## Result
+This program was executed successfully.
 
 # 🔤 Dictionary-Python Program to Sort a Dictionary by Keys and Values
 
@@ -69,11 +87,20 @@ To write a Python program that sorts a dictionary's:
 ---
 
 ## 🧪Program
-Add Code here
+```
+data = {'vehicle': 'car', 'animal': 'tiger', 'flower': 'rose', 'fruit': 'apple','vegetable': 'carrot'}
 
+sorted_by_keys = dict(sorted(data.items()))
+sorted_by_values = dict(sorted(data.items(), key=lambda item: item[1]))
+
+print("Original dictionary:", data)
+print("Sorted by keys:", sorted_by_keys)
+print("Sorted by values:", sorted_by_values)
+```
 ## Sample Output
-
+![alt text](<Screenshot 2026-01-01 103555.png>)
 ## Result
+This program was executed successfully.
 
 # Exception Handling in Python: Avoiding Index Errors
 
@@ -88,11 +115,18 @@ To write a Python program that handles an **IndexError** when trying to access a
 3. Print the result based on whether the index access succeeds or fails.
 
 ## 🧾 Program
-Add code here
+```
+list1 = [12,67,82]
 
+try:
+    print(list1[5])
+except IndexError:
+    print("You're out of list range")
+```
 ## Output
-
+![alt text](<Screenshot 2026-01-01 103623.png>)
 ## Result
+This program was executed successfully.
 
 # File Handling in Python: Count Lines Not Starting with 'T'
 
@@ -108,8 +142,16 @@ To write a Python program that counts the number of lines in a text file `story.
 4. After processing all lines, print the `count` value, which represents the number of lines that do not start with `'T'`.
 
 ## 🧾 Program
-Add code here
+```
+count = 0
+with open("story.txt", "r") as file:
+    for line in file:
+        if not line.startswith('T'):
+            count += 1
 
+print("Number of lines not starting with 'T':", count)
+```
 ## Output
-
+![alt text](<Screenshot 2026-01-01 104132.png>)
 ## Result
+This program was executed successfully.
